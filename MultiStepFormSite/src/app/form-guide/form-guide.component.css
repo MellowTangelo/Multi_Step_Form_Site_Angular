@@ -1,0 +1,60 @@
+.steps {
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  padding: 2rem 0 5rem;
+}
+
+.step-info {
+  display: none;
+}
+
+.step-number {
+  display: flex;
+  border: 1px white solid;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-family: "Ubuntu-Bold", Arial;
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 0.5;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.step-number.active {
+  border: 1px hsl(206, 94%, 87%) solid;
+  color: black;
+  background-color: hsl(206, 94%, 87%);
+}
+
+.step-name {
+  font-family: "Ubuntu-Bold", Arial;
+  color: white;
+  font-size: 0.75rem;
+  letter-spacing: 0.03rem;
+}
+
+.step-title {
+  font-family: "Ubuntu-Medium", Arial;
+  color: hsl(231, 11%, 63%);
+  font-size: 0.75rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .steps {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .steps li {
+    display: flex;
+    align-items: center;
+  }
+
+  .step-info {
+    display: block;
+    padding-left: 0.75rem;
+  }
+}
