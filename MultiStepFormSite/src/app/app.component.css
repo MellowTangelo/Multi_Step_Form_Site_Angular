@@ -1,8 +1,20 @@
+main {
+  margin: 0 auto;
+}
+
 msfs-form-guide {
   background-image: url("../assets/images/bg-sidebar-mobile.svg");
   background-size: cover;
   display: flex;
   justify-content: center;
+}
+
+msfs-page-one,
+msfs-page-two,
+msfs-page-three,
+msfs-page-four,
+msfs-page-five {
+  display: none;
 }
 
 .page-content {
@@ -20,7 +32,66 @@ msfs-form-guide {
   justify-content: center;
 }
 
+msfs-next-step-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 1rem;
+  padding-left: 0.5rem;
+}
+
+msfs-next-step-container.disappear {
+  display: none;
+}
+
+msfs-next-step-container.both-buttons {
+  justify-content: space-between;
+}
+
+@keyframes showPage5 {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: flex;
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+msfs-page-five.appear {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+
+  animation: showPage5 600ms ease-in-out;
+  animation-fill-mode: both;
+}
+
 @media only screen and (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template: 1fr / 1fr 2fr;
+    background-color: white;
+    justify-content: space-between;
+    width: 800px;
+    height: 500px;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    box-shadow: 0 10px 10px -10px lightgrey;
+  }
+
   msfs-form-guide {
     background-image: url("../assets/images/bg-sidebar-desktop.svg");
     background-repeat: no-repeat;
@@ -42,4 +113,15 @@ msfs-form-guide {
   .page-content.ending {
     padding-top: 0;
   }
+
+  msfs-next-step-container {
+    position: initial;
+  }
+
+  /* msfs-page-five {
+    position: initial;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  } */
 }

@@ -1,0 +1,236 @@
+@keyframes showPage {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.page-2.appear {
+  display: initial;
+  animation: showPage 600ms ease-in-out;
+  animation-fill-mode: both;
+}
+
+.page-2 {
+  display: none;
+  opacity: 0;
+}
+
+.page-title {
+  font-family: "Ubuntu-Bold", Arial;
+  font-size: 1.25rem;
+  color: hsl(213, 96%, 18%);
+}
+
+.page-description {
+  font-family: "Ubuntu-Regular", Arial;
+  color: hsl(231, 11%, 63%);
+  font-size: 0.875rem;
+  padding: 0.5rem 0 1rem;
+}
+
+.plan-info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.arcade,
+.advanced,
+.pro {
+  position: relative;
+}
+
+.arcade input,
+.advanced input,
+.pro input {
+  position: absolute;
+  opacity: 0;
+}
+
+.arcade input:checked + .plan-button,
+.advanced input:checked + .plan-button,
+.pro input:checked + .plan-button {
+  border-color: hsl(213, 96%, 18%);
+  background-color: hsla(228, 100%, 84%, 25%);
+}
+
+.arcade input:focus,
+.arcade input:focus + .plan-button,
+.advanced input:focus,
+.advanced input:focus + .plan-button,
+.pro input:focus,
+.pro input:focus + .plan-button {
+  border-color: hsl(213, 96%, 18%);
+  background-color: hsla(228, 100%, 84%, 50%);
+}
+
+.plan-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(231, 11%, 63%, 50%);
+  gap: 1rem;
+  transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.plan-button:hover {
+  border-color: hsl(213, 96%, 18%);
+}
+
+.plan-button svg {
+  grid-column-start: 1;
+  grid-row-start: span 2;
+}
+
+.plan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.25rem;
+}
+
+.plan-name {
+  font-family: "Ubuntu-Bold", Arial;
+  color: hsl(213, 96%, 18%);
+  font-size: 0.875rem;
+}
+
+.plan-cost {
+  font-family: "Ubuntu-Regular", Arial;
+  color: hsl(231, 11%, 63%);
+  font-size: 0.75rem;
+}
+
+.yearly-discount {
+  display: none;
+  font-family: "Ubuntu-Regular", Arial;
+  color: hsl(213, 96%, 18%);
+  font-size: 0.75rem;
+  transition: opacity 0.3s e ase-in-out;
+}
+
+.yearly-discount.active {
+  display: block;
+}
+
+.period-container {
+  background-color: hsla(228, 100%, 84%, 25%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.monthly,
+.yearly {
+  font-family: "Ubuntu-Bold", "Arial";
+  color: hsl(231, 11%, 63%);
+  font-size: 0.875rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.yearly.active,
+.monthly.active {
+  color: hsl(213, 96%, 18%);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.625rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.25rem;
+  width: 1.25rem;
+  left: 0.25rem;
+  bottom: 0.2rem;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.25rem);
+}
+
+.switch input:focus,
+.switch input:focus + .slider {
+  background-color: hsl(213, 96%, 18%);
+}
+
+.switch input:focus-visible,
+.switch input:focus-visible + .slider:before {
+  background-color: goldenrod;
+}
+
+.slider.round {
+  border-radius: 2rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 700px) {
+  .page-2 {
+    position: initial;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .page-description {
+    padding-right: 0;
+  }
+
+  .plan-info {
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .plan-button {
+    flex-direction: column;
+    align-items: first baseline;
+    gap: 2.5rem;
+  }
+
+  .slider:before {
+    bottom: 0.175rem;
+  }
+}

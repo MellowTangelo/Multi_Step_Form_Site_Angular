@@ -1,0 +1,106 @@
+@keyframes showPage {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.page-3.appear {
+  display: initial;
+  animation: showPage 600ms ease-in-out;
+  animation-fill-mode: both;
+}
+
+.page-3 {
+  display: none;
+  opacity: 0;
+}
+
+.page-title {
+  font-family: "Ubuntu-Bold", Arial;
+  font-size: 1.25rem;
+  color: hsl(213, 96%, 18%);
+}
+
+.page-description {
+  font-family: "Ubuntu-Regular", Arial;
+  color: hsl(231, 11%, 63%);
+  font-size: 0.875rem;
+  padding: 0.5rem 0 1rem;
+}
+
+.add-on-info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.add-on-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.add-on-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(231, 11%, 63%, 50%);
+  gap: 1rem;
+  transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.add-on-button:hover {
+  border-color: hsl(213, 96%, 18%);
+}
+
+.plan-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.25rem;
+}
+
+.plan-name {
+  font-family: "Ubuntu-Bold", Arial;
+  color: hsl(213, 96%, 18%);
+  font-size: 0.875rem;
+}
+
+.add-on-detail {
+  font-family: "Ubuntu-Regular", Arial;
+  color: hsl(231, 11%, 63%);
+  font-size: 0.875rem;
+}
+
+.add-on-cost {
+    font-family: "Ubuntu-Medium", Arial;
+    color: #8510d8;
+    font-size: 0.875rem;
+  }
+
+@media only screen and (min-width: 700px) {
+  .page-3 {
+    position: initial;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .page-description {
+    padding-right: 0;
+  }
+}

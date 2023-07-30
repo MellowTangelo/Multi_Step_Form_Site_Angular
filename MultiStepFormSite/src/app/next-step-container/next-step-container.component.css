@@ -1,0 +1,77 @@
+@keyframes showPage {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    1% {
+      display: block;
+    }
+    100% {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+.previous-step-button {
+  border: none;
+  background-color: transparent;
+  font-family: "Ubuntu-Bold", Arial;
+  color: hsl(231, 11%, 63%);
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  display: none;
+  opacity: 0;
+}
+
+.previous-step-button:hover {
+  color: hsl(213, 96%, 18%);
+}
+
+.previous-step-button.appear {
+    display: initial;
+    animation: showPage 600ms ease-in-out;
+    animation-fill-mode: both;
+  }
+
+.next-step-button {
+  border-color: transparent;
+  border-radius: 0.25rem;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  font-family: "Ubuntu-Regular", Arial;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.next-step-button.inactive {
+  display: none;
+}
+
+.submit-button {
+  display: none;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  font-family: "Ubuntu-Regular", Arial;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button.active {
+  display: initial;
+}
+
+.next-step-button:hover,
+.next-step-button:focus-visible {
+  background-color: hsl(213, 96%, 18%, 85%);
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+  background-color: hsl(243, 100%, 62%);
+}
