@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'msfs-page-five',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-five.component.css']
 })
 export class PageFiveComponent {
+  @Input() pageFive! : Element | null;
 
 }

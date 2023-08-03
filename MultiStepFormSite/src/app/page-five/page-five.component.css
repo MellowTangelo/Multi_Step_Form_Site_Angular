@@ -1,4 +1,4 @@
-@keyframes showPage5 {
+/* @keyframes showPage5 {
   0% {
     display: none;
     opacity: 0;
@@ -27,7 +27,7 @@
 .page-5 {
   display: none;
   opacity: 0;
-}
+} */
 
 .page-title {
   font-family: "Ubuntu-Bold", Arial;
@@ -43,12 +43,12 @@
 }
 
 @media only screen and (min-width: 700px) {
-  .page-5 {
+  /* .page-5 {
     position: initial;
     padding: 0;
     margin: 0;
     box-shadow: none;
-  }
+  } */
 
   .page-description {
     padding-right: 0;

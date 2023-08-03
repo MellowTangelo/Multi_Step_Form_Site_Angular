@@ -1,3 +1,59 @@
+@keyframes showPage {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes hidePage {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes showPage5 {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: flex;
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+@keyframes hidePage5 {
+  0% {
+    display: flex;
+    opacity: 1;
+  }
+  1% {
+    display: flex;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
 main {
   margin: 0 auto;
 }
@@ -15,6 +71,30 @@ msfs-page-three,
 msfs-page-four,
 msfs-page-five {
   display: none;
+}
+
+msfs-page-one.appear,
+msfs-page-two.appear,
+msfs-page-three.appear,
+msfs-page-four.appear {
+  display: initial;
+  animation: showPage 600ms ease-in-out;
+  animation-fill-mode: both;
+}
+
+msfs-page-one.disappear,
+msfs-page-two.disappear,
+msfs-page-three.disappear,
+msfs-page-four.disappear {
+  display: none;
+  animation: hidePage 10ms ease-in-out;
+  animation-fill-mode: both;
+}
+
+msfs-page-five.appear {
+  display: initial;
+  animation: showPage5 600ms ease-in-out;
+  animation-fill-mode: both;
 }
 
 .page-content {
@@ -35,7 +115,7 @@ msfs-page-five {
 msfs-next-step-container {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -118,10 +198,7 @@ msfs-page-five.appear {
     position: initial;
   }
 
-  /* msfs-page-five {
-    position: initial;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-  } */
+  msfs-page-five {
+    padding-top: 6.5rem;
+  }
 }

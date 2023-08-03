@@ -1,16 +1,16 @@
 @keyframes showPage {
-    0% {
-      display: none;
-      opacity: 0;
-    }
-    1% {
-      display: block;
-    }
-    100% {
-      display: block;
-      opacity: 1;
-    }
+  0% {
+    display: none;
+    opacity: 0;
   }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
 
 .previous-step-button {
   border: none;
@@ -20,7 +20,6 @@
   padding: 0.5rem;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
-
   display: none;
   opacity: 0;
 }
@@ -30,10 +29,10 @@
 }
 
 .previous-step-button.appear {
-    display: initial;
-    animation: showPage 600ms ease-in-out;
-    animation-fill-mode: both;
-  }
+  display: initial;
+  animation: showPage 600ms ease-in-out;
+  animation-fill-mode: both;
+}
 
 .next-step-button {
   border-color: transparent;

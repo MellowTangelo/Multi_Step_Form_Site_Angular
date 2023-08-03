@@ -1,4 +1,4 @@
-@keyframes showPage {
+/* @keyframes showPage {
   0% {
     display: none;
     opacity: 0;
@@ -21,7 +21,7 @@
 .page-3 {
   display: none;
   opacity: 0;
-}
+} */
 
 .page-title {
   font-family: "Ubuntu-Bold", Arial;
@@ -87,18 +87,18 @@
 }
 
 .add-on-cost {
-    font-family: "Ubuntu-Medium", Arial;
-    color: #8510d8;
-    font-size: 0.875rem;
-  }
+  font-family: "Ubuntu-Medium", Arial;
+  color: #8510d8;
+  font-size: 0.875rem;
+}
 
 @media only screen and (min-width: 700px) {
-  .page-3 {
+  /* .page-3 {
     position: initial;
     padding: 0;
     margin: 0;
     box-shadow: none;
-  }
+  } */
 
   .page-description {
     padding-right: 0;

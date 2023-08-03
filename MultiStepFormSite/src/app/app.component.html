@@ -1,11 +1,11 @@
 <main>
   <msfs-form-guide></msfs-form-guide>
   <div class="page-content">
-    <msfs-page-one></msfs-page-one>
-    <msfs-page-two></msfs-page-two>
-    <msfs-page-three></msfs-page-three>
-    <msfs-page-four></msfs-page-four>
-    <msfs-page-five></msfs-page-five>
-    <msfs-next-step-container></msfs-next-step-container>
+    <msfs-page-one *ngIf="showPageOne" class="appear"></msfs-page-one>
+    <msfs-page-two *ngIf="showPageTwo" class="appear"></msfs-page-two>
+    <msfs-page-three *ngIf="showPageThree" class="appear"></msfs-page-three>
+    <msfs-page-four *ngIf="showPageFour" class="appear"></msfs-page-four>
+    <msfs-page-five *ngIf="showPageFive" class="appear"></msfs-page-five>
+    <msfs-next-step-container [pageIndex]="currentPageIndex"></msfs-next-step-container>
   </div>
 </main>
